@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lalala</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Окно создания папки</h2>
+              </div>
+              <div class="modal-body">
+                <input class="modal-body__input-visible" type="text" placeholder="Название папки">
+                <form class="modal-body__form" onsubmit="setTimeout(function () { window.location.reload(); }, 10)" method="POST" action="http://127.0.0.1:5000/api/v1/files/create/dir">
+                    <input type="text" class="modal-body__form-input" name="dir">
+                    <button class="modal-body__form-btn" type="submit">
+                        Добавить папку
+                    </button>
+                </form>
+              </div>
+              <!-- <div class="modal-footer">
+                <h3>Футер модального окна</h3>
+              </div> -->
+            </div>
+          
+          </div>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__text-logo">
+                        First word
+                    </div>
+                    <img class="header__logo-img" src="images/image 1.png" alt="lalala">
+                    <div class="header__text-logo">
+                        Second word
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="project">
+                <div class="container">
+                    <h2 class="project__forename">
+                        Web Development Project
+                    </h2>
+                    
+                    <div class="project__content">
+                        <div class="project__title">
+                            Название
+                        </div>
+                        <div class="project__list-names"></div>
+                    </div>
+                    <!-- <form method="POST" action="http://127.0.0.1:5000/api/v1/files/create/dir"> -->
+                        <!-- <input type="text" class="project__input-novisible" name="dir"> -->
+                        <button id="myBtn" class="project__btn">
+                            Добавить папку
+                        </button>
+                    <!-- </form> -->
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <p class="footer__copy">© 2022 - xxxx</p>
+                    <a class="footer__consent" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
